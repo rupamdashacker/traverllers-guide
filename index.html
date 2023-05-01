@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>travel guide website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nearby Restaurents</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_5km8Hmghh36HGu1kUCVXkOIkkNPZRnE&libraries=places"></script>
+    <script src="./script.js"></script>
+  </head>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <a href="/restaurants.html">
-    <button type="button" class="btn btn-restaurants" >restaurants</button>
-  </a>
-  
-  
-</body>
+  <body>
+
+    <!-- <div id="search">
+      <div class="row">
+        <div class="col">
+          <input id="searchTextField" type="text" size="50" />
+        </div>
+        <div class="col">
+          <button class="btn geoloc" onclick="getlocation()">get location</button>
+        </div>
+      </div>
+    </div> -->
+
+    <div id="filter">
+      <div class="row">
+        <div class="col">
+          <p class="search-caption">Search for </p>
+        </div>
+        <div class="col">
+          <button class="btn filter" onclick="getlocation('restaurant')">Restaurants</button>
+        </div>
+        <div class="col">
+          <button class="btn filter" onclick="getlocation('hospital')">Hospitals</button>
+        </div>
+        <div class="col">
+          <button class="btn filter" onclick="getlocation('police')">Police Station</button>
+        </div>
+        <div class="col">
+          <button class="btn filter" onclick="getlocation('pharmacy')">Medicine Shops </button>
+        </div>
+        <div class="col">
+          <button class="btn filter" onclick="getlocation('bank')">Banks </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="result">
+    </div>
+    <div id="map" style="height: 1000px"></div>
+
+
+  </body>
 </html>
